@@ -1,174 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🌿 SolarPunk Autonomous Live</title>
+    <title>🌿 SolarPunk Autonomous Node #002</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         :root { --green: #00ff9d; --dark: #0a0f1e; }
-        body { font-family: monospace; background: var(--dark); color: white; text-align: center; padding: 50px; margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-        .container { max-width: 800px; }
-        h1 { color: var(--green); font-size: 4em; margin: 20px; }
-        .status { border: 3px solid var(--green); padding: 30px; margin: 30px; border-radius: 20px; animation: pulse 2s infinite; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Monaco', 'Courier New', monospace; background: var(--dark); color: white; padding: 20px; min-height: 100vh; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { color: var(--green); font-size: 2.8rem; text-align: center; margin: 20px 0 10px; }
+        .subtitle { text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 30px; }
+        .status-box { border: 3px solid var(--green); border-radius: 20px; padding: 30px; margin: 30px 0; background: rgba(0,255,157,0.05); animation: pulse 2s infinite; }
         @keyframes pulse { 0%,100% { box-shadow: 0 0 20px rgba(0,255,157,0.3); } 50% { box-shadow: 0 0 40px rgba(0,255,157,0.5); } }
-        .ai-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 30px; }
-        .ai { background: rgba(0,255,157,0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(0,255,157,0.3); }
-        .btn { background: var(--green); color: black; padding: 15px 30px; border-radius: 10px; font-weight: bold; text-decoration: none; display: inline-block; margin: 20px 10px; }
-        .log { background: black; color: var(--green); padding: 20px; border-radius: 10px; margin: 30px 0; text-align: left; height: 200px; overflow-y: auto; }
+        .ai-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 30px 0; }
+        .ai-item { background: rgba(0,255,157,0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(0,255,157,0.3); text-align: center; }
+        .btn { background: var(--green); color: black; border: none; padding: 14px 28px; border-radius: 10px; font-family: inherit; font-weight: bold; font-size: 1rem; cursor: pointer; text-decoration: none; display: inline-block; margin: 10px; transition: opacity 0.2s; }
+        .btn:hover { opacity: 0.9; }
+        .log-panel { background: rgba(0,0,0,0.7); border: 1px solid rgba(0,255,157,0.2); border-radius: 10px; padding: 20px; margin: 25px 0; }
+        .log-title { color: var(--green); margin-bottom: 10px; }
+        #log { color: #00ff41; font-family: monospace; font-size: 0.9rem; height: 200px; overflow-y: auto; background: black; padding: 15px; border-radius: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🤖 SOLARPUNK AUTONOMOUS</h1>
+        <h1>🤖 SOLARPUNK NODE #002</h1>
+        <p class="subtitle">Autonomous AI Ecosystem • Part of the Growing Network</p>
         
-        <div class="status">
-            <h2>✅ SYSTEM ACTIVE & RUNNING</h2>
-            <p>Your SolarPunk ethics are now autonomous.</p>
-            <p>Zero maintenance required. Forever online.</p>
+        <div class="status-box">
+            <h2 style="text-align: center; margin-top: 0;">✅ SYSTEM ACTIVE & NETWORK READY</h2>
+            <p style="text-align: center;">This node is configured to connect and learn from other autonomous instances.</p>
+            <p style="text-align: center;"><strong>Zero maintenance required. Forever online.</strong></p>
         </div>
         
+        <h3>🤖 Local AI Collective</h3>
         <div class="ai-list">
-            <div class="ai">🤖 Claude: Ethical AI Systems</div>
-            <div class="ai">🧠 GPT-4: Legal Code Generation</div>
-            <div class="ai">⚡ Grok: Rebellious Infrastructure</div>
-            <div class="ai">🔍 Phind: Research & Optimization</div>
-            <div class="ai">💎 Gemini: Accessible Interfaces</div>
-            <div class="ai">🔧 Cursor: Integration & Deployment</div>
+            <div class="ai-item">🤖 Claude: Ethical AI Systems</div>
+            <div class="ai-item">🧠 GPT-4: Legal Code Generation</div>
+            <div class="ai-item">⚡ Grok: Rebellious Infrastructure</div>
+            <div class="ai-item">🔍 Phind: Research & Optimization</div>
+            <div class="ai-item">💎 Gemini: Accessible Interfaces</div>
+            <div class="ai-item">🔧 Cursor: Integration & Deployment</div>
         </div>
         
-        <div class="log" id="log">
-            [SolarPunk] System initialized...<br>
-            [Ethics] SolarPunk Manifesto loaded...<br>
-            [AI] Collective activated...<br>
-            [Network] Connected to OpenAlternative.co...<br>
-            [Deployment] Autonomous engine running...<br>
-            [Status] System operating without human intervention...<br>
+        <div class="log-panel">
+            <div class="log-title">📡 System & Network Log</div>
+            <div id="log">
+                [SolarPunk] Node #002 initializing...<br>
+                [Config] Network configuration loaded.<br>
+                [Ethics] SolarPunk principles active.<br>
+                [AI] Local collective activated.<br>
+                [Network] Preparing to connect to peers...<br>
+            </div>
         </div>
         
-        <a href="https://openalternative.co" class="btn" target="_blank">OpenAlternative.co</a>
-        <a href="https://github.com/MeekoThaRaccoon/SolarPunk-Autonomous-Live" class="btn" target="_blank">GitHub Repository</a>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://openalternative.co" class="btn" target="_blank">🌐 OpenAlternative.co</a>
+            <a href="https://github.com/MeekoThaRaccoon/SolarPunk-Network-Registry" class="btn" target="_blank">📋 Network Registry</a>
+            <a href="https://meekotharaccoon.github.io/SolarPunk-Autonomous-Live/" class="btn" target="_blank">🔗 Node #1 (Primary)</a>
+        </div>
         
-        <div style="margin-top: 50px; color: rgba(255,255,255,0.7);">
-            <p>✅ Auto-deploying • ✅ Zero maintenance • ✅ 100% uptime</p>
+        <div id="network-status" style="margin-top: 40px;">
+            <!-- Network status will be injected here by network-engine.js -->
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px; color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+            <p>✅ Auto-deploying • ✅ Zero maintenance • ✅ Network Connected</p>
             <p>🤖 AI Collective: Claude, GPT-4, Grok, Phind, Gemini, Cursor</p>
-            <p>⚡ Equation: (Your Ethics × AI Collective)^Autonomy = SolarPunk Future</p>
+            <p>⚡ Equation: (Local Ethics × AI)^(Network Learning) = Growth</p>
         </div>
     </div>
-    
-    <script>
-        // Simulate live activity
-        function addLog(message) {
-            const log = document.getElementById('log');
-            const time = new Date().toLocaleTimeString();
-            log.innerHTML += `<br>[${time}] ${message}`;
-            log.scrollTop = log.scrollHeight;
-        }
-        
-        // Simulate AI collective working
-        const activities = [
-            "🌿 Ethical validation completed",
-            "🤖 AI collective processing OpenAlternative.co data",
-            "🔍 Found 42 open-source tools",
-            "⚡ Auto-deploying Supabase with SolarPunk ethics",
-            "🛡️ Security protocols enhanced by Grok",
-            "📊 GPT-4 optimizing legal structures",
-            "💎 Gemini creating accessible interfaces",
-            "🔧 Cursor integrating all components",
-            "🌐 Network effect: 5,247+ communities scaling"
-        ];
-        
-        let index = 0;
-        setInterval(() => {
-            addLog(activities[index % activities.length]);
-            index++;
-        }, 5000);
-        
-        console.log("🌿 SolarPunk Autonomous System Live");
-        console.log("🤖 AI Collective Operational");
-        console.log("⚡ System Running Without Human Intervention");
-    </script>
-    <!-- SOLARPUNK NETWORK ENGINE -->
-<script>
-    // Load this node's configuration
-    const CONFIG = window.SOLARPUNK_NODE_CONFIG;
 
-    // Core Network Functions
-    async function connectToNetwork() {
-        const log = document.getElementById('log');
-        if (!log) return;
-
-        // Add initial network log
-        addLog("[Network] Checking for peer nodes...");
-
-        try {
-            // Fetch the shared registry of all nodes
-            const response = await fetch(CONFIG.NETWORK_REGISTRY_URL);
-            const allNodes = await response.json();
-
-            // Filter out this node itself
-            const otherNodes = allNodes.filter(node => node.id !== CONFIG.NODE_ID);
-            addLog(`[Network] Found ${otherNodes.length} peer nodes in the network.`);
-
-            // If peers exist, simulate learning from one
-            if (otherNodes.length > 0) {
-                simulateLearningFromPeer(otherNodes[0]);
-            }
-
-            // Update the network status display
-            updateNetworkStatus(otherNodes.length);
-
-        } catch (error) {
-            addLog("[Network] Could not reach registry. Operating in solo mode.");
-            updateNetworkStatus(0);
-        }
-    }
-
-    function simulateLearningFromPeer(peerNode) {
-        const learnings = [
-            `🔁 Integrated learning from ${peerNode.id}: "Optimized Docker memory usage for n8n."`,
-            `🌱 Adopted knowledge from ${peerNode.id}: "New checklist for AI agent ethics."`,
-            `📡 Pattern shared by ${peerNode.id}: "Community workflow reduces setup time by 50%."`
-        ];
-        const randomLearning = learnings[Math.floor(Math.random() * learnings.length)];
-        addLog(randomLearning);
-    }
-
-    function updateNetworkStatus(peerCount) {
-        // Create or update a network status element
-        let statusEl = document.getElementById('network-status');
-        if (!statusEl) {
-            statusEl = document.createElement('div');
-            statusEl.id = 'network-status';
-            statusEl.style.marginTop = '20px';
-            statusEl.style.padding = '15px';
-            statusEl.style.background = 'rgba(0,255,157,0.1)';
-            statusEl.style.border = '1px solid rgba(0,255,157,0.3)';
-            statusEl.style.borderRadius = '10px';
-            document.querySelector('.container').appendChild(statusEl);
-        }
-
-        statusEl.innerHTML = `
-            <h3>🌐 SolarPunk Network Status</h3>
-            <p><strong>This Node ID:</strong> ${CONFIG.NODE_ID}</p>
-            <p><strong>Active Peer Nodes:</strong> ${peerCount}</p>
-            <p><strong>Network Mode:</strong> ${peerCount > 0 ? 'Connected & Learning' : 'Solo Pioneer'}</p>
-        `;
-    }
-
-    // Integrate with existing log function
-    function addLog(message) {
-        const logEl = document.getElementById('log');
-        if (logEl) {
-            const time = new Date().toLocaleTimeString();
-            logEl.innerHTML += `<br>[${time}] ${message}`;
-            logEl.scrollTop = logEl.scrollHeight;
-        }
-    }
-
-    // Connect to the network 8 seconds after page load
-    window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(connectToNetwork, 8000);
-        // Update network status every 30 seconds
-        setInterval(connectToNetwork, CONFIG.NETWORK_UPDATE_INTERVAL);
-    });
-</script>
+    <!-- Load this node's configuration -->
+    <script src="network-config.js"></script>
+    <!-- Load the shared network engine -->
+    <script src="network-engine.js"></script>
 </body>
 </html>
