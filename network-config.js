@@ -1,8 +1,8 @@
 // NETWORK CONFIGURATION for SolarPunk Autonomous Node
 // This node's unique identity in the network
 window.SOLARPUNK_NODE_CONFIG = {
-    NODE_ID: 'san-node-001', // YOU ARE NODE #1. Others must change this.
-    NODE_NAME: 'The First Node',
+    NODE_ID: 'san-node-002', // Changed from 001 to 002
+    NODE_NAME: 'The Second Node', // Changed the name
     NODE_DESCRIPTION: 'The original SolarPunk Autonomous Live instance.',
     NODE_URL: 'https://meekotharaccoon.github.io/SolarPunk-Autonomous-Live/',
     // The shared registry of all nodes
